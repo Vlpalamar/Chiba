@@ -115,6 +115,7 @@ public Transform SpellPossition
 
     public override void OnStartLocalPlayer()
     {
+       // base.OnStartLocalPlayer();
        
         this.tag=TagManager.TagPlayer;
         Main_Spawn(startPosition);
