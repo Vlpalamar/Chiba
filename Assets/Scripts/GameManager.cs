@@ -20,13 +20,15 @@ public class GameManager : NetworkBehaviour
     }
     // Start is called before the first frame update
    
-    [SerializeField] public SyncList<Transform> heroes = new SyncList<Transform>();
+    [SerializeField] public SyncList<Hero> heroes = new SyncList<Hero>();
 
     [Server]
-    public void ServerAddToServer(Transform transform)
+    public void ServerAddToServer(Hero newHero)
     {
-        heroes.Add(transform);
-      // RpcAddToServer(transform);
+        
+       // if(newHero!= null)
+        //heroes.Add(newHero);
+      //// RpcAddToServer(transform);
     }
 
     //[ClientRpc]

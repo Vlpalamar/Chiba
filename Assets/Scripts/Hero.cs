@@ -120,7 +120,7 @@ public Transform SpellPossition
         this.tag=TagManager.TagPlayer;
         Main_Spawn(startPosition);
         //GameManager.Inst.heroes.Add(this.gameObject);
-        CmdAddToServer(this.transform);
+        CmdAddToServer(this);
         
 
 
@@ -440,9 +440,9 @@ public Transform SpellPossition
 
 
     [Command]
-    private void CmdAddToServer(Transform transform)
+    private void CmdAddToServer(Hero  thisHero)
     {
-        GameManager.Inst.ServerAddToServer(transform);
+        GameManager.Inst.ServerAddToServer(thisHero);
     }
 
     void OnTriggerEnter(Collider other) 
